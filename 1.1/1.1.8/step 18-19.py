@@ -55,16 +55,17 @@ for step in range(50):
             ht.forward(10)
             vt.forward(10)
 
-            if (abs(ht.xcor() - vt.xcor()) <= 40):
-                if (abs(ht.ycor() - vt.ycor()) <= 40):
+
+            if (abs(ht.xcor() - vt.xcor()) <= 20):
+             if (abs(ht.ycor() - vt.ycor()) <= 20):
 
                     horiz_turtles.remove(ht)
                     vert_turtles.remove(vt)
                     ht.fillcolor("gray")
                     vt.fillcolor("gray")
 
-
-
+                    if vert_turtles and horiz_turtles:
+                        abs((ht.xcor() + vt.xcor())  <= 20)
 
 wn = trtl.Screen()
 wn.mainloop()
