@@ -1,12 +1,15 @@
 import turtle as trtl
 
+
 painter = trtl.Turtle()
-painter.pensize(5)
+painter.pensize(8)
 painter.speed(20)
 painter.left(35)
 painter.penup()
 painter.forward(150)
 painter.pendown()
+
+
 
 
 painter.pencolor("darkred")
@@ -35,7 +38,10 @@ painter.forward(65)
 painter.left(66)
 painter.forward(55)
 
+
 painter.penup()
+
+
 
 
 painter.right(70)
@@ -62,6 +68,12 @@ painter.left(179)
 painter.forward(300)
 painter.pendown()
 painter.left(113)
+painter.penup()
+painter.left(180)
+
+
+painter.pendown()
+painter.left(69)
 painter.forward(152)
 painter.penup()
 painter.left(180)
@@ -76,15 +88,54 @@ painter.forward(155)
 painter.right(124)
 painter.forward(66)
 painter.left(115)
+painter.forward(45)
+painter.left(70)
+painter.forward(180)
+painter.penup()
+painter.goto(0,0)
+painter.left(180)
+painter.forward(115)
+painter.left(90)
+painter.forward(60)
+painter.pendown()
+for x in range(4):
+    painter.forward(100)
+    painter.right(90)
+painter.penup()
+painter.goto(0,0)
+painter.left(90)
+
+
+painter.left(180)
+painter.forward(115)
+painter.left(90)
+painter.forward(90)
+painter.right(90)
+painter.forward(265)
+painter.right(90)
+painter.forward(25)
+painter.right(155)
+painter.forward(5)
+painter.pendown()
+painter.forward(315)
+painter.left(65)
+painter.forward(65)
+painter.left(115)
+painter.forward(45)
+painter.right(113)
+painter.forward(35)
+painter.left(110)
+painter.forward(170)
+painter.left(70)
+painter.forward(35)
+painter.right(75)
+painter.forward(75)
 
 
 
-
-
-
-
-
-
+int(input("Would you like to change color, if so say yes"))
+if "yes":
+    painter.color("blue")
 
 
 wn = trtl.Screen()
