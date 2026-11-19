@@ -13,18 +13,18 @@ score = 0
 font_setup = ("Arial", 20, "normal")
 spot = trtl.Turtle()
 
-timer = 10
+timer = 25
 counter_interval = 1000   #1000 represents 1 second
 timer_up = False
 
 
-
+colors = ["red", "yellow", "blue", "purple", "green" ]
 
 
 
 spot.shapesize(spot_size)
 #-----initialize turtle-----
-spot = trtl.Turtle()
+
 spot.shape(spot_shape)
 spot.shapesize(spot_size)
 spot.color(spot_color)
@@ -32,7 +32,7 @@ spot.color(spot_color)
 
 score_writer = trtl.Turtle()
 score_writer.shapesize(1)
-score_writer.color("Green")
+score_writer.color("white")
 score_writer.penup()
 score_writer.hideturtle()
 score_writer.goto(200,130)
@@ -49,6 +49,7 @@ def spot_clicked(x, y):
         update_score()
     else:
         spot.hideturtle()
+
 def countdown():
   global timer, timer_up
   counter.clear()
@@ -75,12 +76,20 @@ def update_score():
     score_writer.write(score, font = font_setup)
 spot.penup()
 
+def color():
+    global spot_color
+    spot.color = (rand.choice(colors))
+    spot.stamp()
+
+color()
 #-----events----------------
 spot.onclick(spot_clicked)
 
 
 
+
 wn = trtl.Screen()
+wn.bgcolor("black")
 wn.ontimer(countdown, counter_interval)
 wn.mainloop()
 
